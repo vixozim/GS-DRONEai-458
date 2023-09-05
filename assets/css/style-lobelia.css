@@ -573,7 +573,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .bg-white-22 { background-color: rgba(255, 255, 255, 0.22); }
 
-.bg-theme { background-image:linear-gradient(#213361, #163CED)  !important; }
+.bg-theme { background-image:linear-gradient(#172A65, #163CED)  !important; }
 
 .bg-theme.current { background-color: rgba(10, 25, 146, 0.7) !important; }
 
@@ -6508,7 +6508,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .logo-light, .is-transparent:not(.has-fixed) .logo-dark, .is-dark .logo-dark { display: none; }
 
-.logo img { height: 36px; transition: all .4s; }
+.logo img { height: 70px; transition: all .4s; }
 
 .logo-md img { height: 44px; }
 
@@ -6520,8 +6520,8 @@ ul.progress-info { display: flex; justify-content: space-between; }
   .header-container:not(.container) { padding: 0 25px; }
   .header-container-s1:not(.container) { padding: 0 25px; }
   .header-banner { min-height: 98px; }
-  .logo img { height: 57px; }
-  .logo-md img { height: 57px; }
+  .logo img { height: 100px; }
+  .logo-md img { height: 70px; }
   .logo-lg img { height: 60px; } }
 
 @media (min-width: 1200px) { .header-container:not(.container) { padding: 0 25px; }
