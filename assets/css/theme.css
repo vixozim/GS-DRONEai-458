@@ -68,3 +68,19 @@
 .hidden-mobile{display: none;}
 
 }
+
+
+.section-connect2::before{
+    position: absolute;
+    top: 0;
+    margin-top: 350px;
+    left: 0%;
+    content: "";
+    height: 80px;
+    width: 2px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #61F9C4 0%,#61F9C4 100%);
+    z-index: 2;
+	height: 600px;
+
+}

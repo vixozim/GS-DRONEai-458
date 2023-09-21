@@ -116,7 +116,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .lead, .lead-light { font-size: 1.1rem; font-weight: 300; color: #415076; }
 
-.lead-s2 { font-size: 1.1rem; color: #415076; }
+.lead-s2 { font-size: 1.1rem; color: #ffffff !important;}
 
 .lead-regular { font-weight: 400; }
 
@@ -577,7 +577,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .bg-theme.current { background-color: rgba(10, 25, 146, 0.7) !important; }
 
-.bg-theme-alt { background-color: #163CED !important; }
+.bg-theme-alt { background-image:linear-gradient(#001a7c, #04092e)  !important;  }
 
 .bg-theme-alt.current { background-color: rgba(0, 5, 55, 0.7) !important; }
 
@@ -6859,6 +6859,12 @@ ul.progress-info { display: flex; justify-content: space-between; }
 @media (min-width: 768px) { .container { padding-right: 15px; padding-left: 15px; } }
 
 /** 05.04 Footer */
+.footer-line {
+border-top: 2px #ffffff solid;
+margin-bottom: 30px;
+
+}
+
 .nk-footer-angled { margin-top: -450px; }
 
 .footer-links { margin: 0 -12px; }
