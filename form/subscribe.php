@@ -36,17 +36,30 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		if ($honeypot == '' && !(empty($emailTO))) {
 			### If you want use SMTP 
-			// $mail->isSMTP();
-			// $mail->SMTPDebug = 0;
-			// $mail->Host = 'smtp_host';
-			// $mail->Port = 587;
-			// $mail->SMTPAuth = true;
-			// $mail->Username = 'smtp_username';
-			// $mail->Password = 'smtp_password';
+			 $mail->isSMTP();
+			 $mail->SMTPDebug = 0;
+			 $mail->Host = 'c2390250.ferozo.com';
+			 $mail->Port = 465;
+			 $mail->SMTPAuth = true;
+			$mail->SMTPSecure = 'ssl';
+			 $mail->Username = 'no-responder@droneservices.com.ar';
+		/ $mail->Password = 'w4ZkH@K8zQ';
 
 			### Regular email configure
 			$mail->IsHTML(true);
-			$mail->CharSet = 'UTF-8';
+		/$mail->CharSet = 'UTF-8';
+			// Datos de la cuenta de correo utilizada para enviar vía SMTP
+	//$smtpHost = "c2390250.ferozo.com";  // Dominio alternativo brindado en el email de alta 
+	//$smtpUsuario = "no-responder@droneservices.com.ar";  // Mi cuenta de correo
+	//$smtpClave = "w4ZkH@K8zQ";  // Mi contraseña
+
+				//$mail = new PHPMailer();
+	//$mail->IsSMTP();
+	//$mail->SMTPAuth = true;
+	//$mail->Port = 465; 
+	//$mail->SMTPSecure = 'ssl';
+	//$mail->IsHTML(true); 
+	//$mail->CharSet = "utf-8";
 
 			$mail->From = ($formEmail !='') ? $formEmail : $cf_email;
 			$mail->FromName = $cf_name . ' - ' . $sitename;

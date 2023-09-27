@@ -6,10 +6,10 @@ $mail = new PHPMailer();
 $emailTO = $emailBCC =  $emailCC = array(); $formEmail = '';
 
 ### Enter Your Sitename 
-$sitename = 'Your Site Name';
+$sitename = 'Drone Ai';
 
 ### Enter your email addresses: @required
-$emailTO[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' ); 
+$emailTO[] = array( 'email' => 'daiterina@gmail.com', 'name' => 'Your Name' ); 
 
 ### Enable bellow parameters & update your BCC email if require.
 //$emailBCC[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
@@ -18,13 +18,13 @@ $emailTO[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
 //$emailCC[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
 
 ### Enter Email Subject
-$subject = "Contact Us " . ' - ' . $sitename; 
+$subject = "Contacto " . ' - ' . $sitename; 
 
 ### If your did not recive email after submit form please enable below line and must change to your correct domain name. eg. noreply@example.com
 //$formEmail = 'noreply@yoursite.com';
 
 ### Success Messages
-$msg_success = "We have <strong>successfully</strong> received your message. We'll get back to you soon.";
+$msg_success = "El mesaje se ha enviado con éxito, nos pondremos en contacto a la brevedad.";
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (isset($_POST["contact-email"]) && $_POST["contact-email"] != '' && isset($_POST["contact-name"]) && $_POST["contact-name"] != '') {
@@ -40,11 +40,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST') {
 			### If you want use SMTP 
 			// $mail->isSMTP();
 			// $mail->SMTPDebug = 0;
-			// $mail->Host = 'smtp_host';
-			// $mail->Port = 587;
+			// $mail->Host = 'c2390250.ferozo.com';
+			// $mail->Port = 465;
 			// $mail->SMTPAuth = true;
-			// $mail->Username = 'smtp_username';
-			// $mail->Password = 'smtp_password';
+			// $mail->Username = 'no-responder@droneservices.com.ar';
+			// $mail->Password = 'w4ZkH@K8zQ';
 
 			### Regular email configure
 			$mail->IsHTML(true);
