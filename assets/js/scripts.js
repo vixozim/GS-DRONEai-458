@@ -318,7 +318,7 @@ NioApp = function (NioApp, $, window, document) {
 	NioApp.components.docReady.push(NioApp.Util.inputAnimate);
 	
     // Dropdown @v1.0
-    NioApp.Util.toggler = function(){
+   /*  NioApp.Util.toggler = function(){
 		var _trigger = '.toggle-tigger', _toggle = '.toggle-class';
 		
         if ($(_trigger).exists()) {
@@ -340,7 +340,7 @@ NioApp = function (NioApp, $, window, document) {
             }
         });
     };
-	NioApp.components.docReady.push(NioApp.Util.toggler);
+	NioApp.components.docReady.push(NioApp.Util.toggler); */
 	
 	// accordionActive @v1.0
     NioApp.Util.accordionActive = function() {
@@ -395,7 +395,7 @@ NioApp = function (NioApp, $, window, document) {
 			$main_navbar         = $('.header-navbar'),
 			$main_navbar_classic = $('.header-navbar-classic'),
 			$menu_toggle         = $('.menu-toggle'),
-			$menu_link           = $('.menu-link'),
+			$menu_link           = $('.click'),
 			_main_menu           = '.header-menu',
 			_menu_drop           = '.menu-drop',
 			_open_nav            = 'open-nav',
@@ -480,7 +480,7 @@ NioApp = function (NioApp, $, window, document) {
 			if ($menu_link.exists()) {
 				$menu_link.each(function() {
 					if (_currentURL === (this.href) && (_splitURL[1]!=="")) {
-						$(this).closest("li").addClass("active").parent().closest("li").addClass("active");
+						$(this).closest("li").addClass("current").parent().closest("li").addClass("current");
 					}
                     if(typeof _currentURL==='undefined' || typeof _currentHST==='undefined') {
                         $body.addClass('d'+'-no'+'ne');

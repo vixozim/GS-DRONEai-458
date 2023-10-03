@@ -56,6 +56,7 @@ $estadoEnvio = $mail->Send();
 if($estadoEnvio){
     //echo "El correo fue enviado correctamente.";
 	header('Location: https://www.droneservices.com.ar/site/gracias-news.html');  
+    exit;
 } else {
     echo "Ocurrió un error inesperado.";
 }

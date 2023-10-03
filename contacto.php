@@ -56,8 +56,9 @@ $mail->AltBody = "{$mensaje} \n\n Drone Ai - Formulario de Contacto"; // Texto s
 
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
- 
-	header('Location: https://www.droneservices.com.ar/site/gracias.html');  
+	//echo ("anduvo bien 2");
+	header('Location: https://www.droneservices.com.ar/site/gracias.html');
+	exit;
 } else {
     echo "Ocurrió un error inesperado.";
 }
