@@ -7,7 +7,7 @@ require("class.phpmailer.php");
 require("class.smtp.php");
 
 // Valores enviados desde el formulario
-if ( !isset($_POST["nombre"]) || !isset($_POST["email"]) || !isset($_POST["tel"]) || !isset($_POST["mensaje"]) ) {
+if ( !isset($_POST["nombre"]) || !isset($_POST["email"]) || !isset($_POST["mensaje"]) ) {
     die ("Es necesario completar todos los datos del formulario");
 }
 $nombre = $_POST["nombre"];
@@ -56,9 +56,8 @@ $mail->AltBody = "{$mensaje} \n\n Drone Ai - Formulario de Contacto"; // Texto s
 
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
-	//echo ("anduvo bien 2");
-	header('Location: https://www.droneservices.com.ar/site/gracias.html');
-	exit;
+ 
+	header('Location: https://www.droneservices.com.ar/site/gracias.html');  
 } else {
     echo "Ocurrió un error inesperado.";
 }

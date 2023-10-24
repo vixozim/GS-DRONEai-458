@@ -318,7 +318,7 @@ NioApp = function (NioApp, $, window, document) {
 	NioApp.components.docReady.push(NioApp.Util.inputAnimate);
 	
     // Dropdown @v1.0
-   /*  NioApp.Util.toggler = function(){
+    NioApp.Util.toggler = function(){
 		var _trigger = '.toggle-tigger', _toggle = '.toggle-class';
 		
         if ($(_trigger).exists()) {
@@ -340,7 +340,7 @@ NioApp = function (NioApp, $, window, document) {
             }
         });
     };
-	NioApp.components.docReady.push(NioApp.Util.toggler); */
+	NioApp.components.docReady.push(NioApp.Util.toggler);
 	
 	// accordionActive @v1.0
     NioApp.Util.accordionActive = function() {
@@ -395,7 +395,7 @@ NioApp = function (NioApp, $, window, document) {
 			$main_navbar         = $('.header-navbar'),
 			$main_navbar_classic = $('.header-navbar-classic'),
 			$menu_toggle         = $('.menu-toggle'),
-			$menu_link           = $('.click'),
+			$menu_link           = $('.menu-link'),
 			_main_menu           = '.header-menu',
 			_menu_drop           = '.menu-drop',
 			_open_nav            = 'open-nav',
@@ -480,7 +480,7 @@ NioApp = function (NioApp, $, window, document) {
 			if ($menu_link.exists()) {
 				$menu_link.each(function() {
 					if (_currentURL === (this.href) && (_splitURL[1]!=="")) {
-						$(this).closest("li").addClass("current").parent().closest("li").addClass("current");
+						$(this).closest("li").addClass("active").parent().closest("li").addClass("active");
 					}
                     if(typeof _currentURL==='undefined' || typeof _currentHST==='undefined') {
                         $body.addClass('d'+'-no'+'ne');
@@ -710,7 +710,7 @@ NioApp = function (NioApp, $, window, document) {
             return true;
         }
         
-  /*       if ($form.exists()) {
+        if ($form.exists()) {
             $form.each(function(){
                 var $self = $(this), _result = $self.find('.form-results');
                 $self.validate({
@@ -731,23 +731,7 @@ NioApp = function (NioApp, $, window, document) {
                 $self.find('.select').on('change', function() { $(this).valid(); });
             });
         }
-	}; */
-    if ($form.exists()) {
-        $form.each(function(){
-            var $self = $(this), _result = $self.find('.form-results');
-            $self.validate({
-                ignore: [],
-                invalidHandler: function () { _result.slideUp(400); },
-                submitHandler: function(form) {
-                _result.slideUp(400);
-                console.log($form.name.value);
-                }
-            });
-            $self.find('.select').on('change', function() { $(this).valid(); });
-        });
-    }
-
-};
+	};
 	NioApp.components.docReady.push(NioApp.Plugins.submitform);
     
 	// Parallax !Plugin @v1.0

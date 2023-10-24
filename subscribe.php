@@ -7,11 +7,11 @@ require("class.phpmailer.php");
 require("class.smtp.php");
 
 // Valores enviados desde el formulario
-if (  !isset($_POST["email"])  ) {
+if (  !isset($_POST["contact-email"])  ) {
     die ("Es necesario completar todos los datos del formulario");
 }
 
-$email = $_POST["email"];
+$email = $_POST["contact-email"];
 
 
 // Datos de la cuenta de correo utilizada para enviar vía SMTP
